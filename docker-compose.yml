@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:10.3
     restart: always
-    envitonment:
+    environment:
       - POSTGRES_USER=eringiv3
       - POSTGRES_PASSWORD=password
     volumes:
