@@ -9,15 +9,15 @@ const main = async () => {
   const todos = await Promise.all(promises);
   console.log({
     users,
-    todos
+    todos,
   });
 };
 
-const createUsers = async ()=> {
+const createUsers = async () => {
   const promises = [...Array(3)].map((_, i) => {
     const userId = `${i + 1}`;
     return prisma.user.upsert({
-      where: { id: userId},
+      where: { id: userId },
       update: {},
       create: {
         id: userId,
