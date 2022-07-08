@@ -1,14 +1,11 @@
 import { Resolvers } from '../types/generated/graphql';
-import * as mutaiton from './mutation/';
+import * as mutation from './mutation';
+import * as query from './query';
 import { dateScalar } from './scalar/date';
 
 const resolvers: Resolvers = {
-  Query: {
-    getUser: () => null,
-    getTodos: () => [],
-    getTodoById: () => null,
-  },
-  Mutation: mutaiton,
+  Query: query,
+  Mutation: mutation,
   Date: dateScalar,
 };
 
